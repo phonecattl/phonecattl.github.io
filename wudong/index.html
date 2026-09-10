@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乌东峰-人文地理与旅行生活指南</title>
+    <meta name="description" content="乌东峰是一个融合自然风光与人文底蕴的地域名片，这里汇集地理特征、四季景观、徒步路线、民俗风情与旅行实用信息，帮助你更深入地了解乌东峰。">
+    <meta name="keywords" content="乌东峰,乌东峰旅游,乌东峰徒步,乌东峰自然景观,乌东峰人文,乌东峰地理,乌东峰旅行攻略">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: #f6f7f4;
+            color: #2d3a2c;
+            line-height: 1.7;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== Header ===== */
+        .site-header {
+            background-color: #2f4b2f;
+            color: #eaf3e5;
+            padding: 16px 0;
+            border-bottom: 3px solid #b6a77a;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-icon {
+            font-size: 36px;
+            line-height: 1;
+        }
+        .logo-text h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #f0f4e0;
+            margin: 0;
+        }
+        .logo-text span {
+            font-size: 14px;
+            opacity: 0.85;
+            display: block;
+            margin-top: 2px;
+        }
+        .main-nav ul {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+        .main-nav a {
+            color: #eaf3e5;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .main-nav a:hover {
+            border-bottom-color: #d9c894;
+        }
+
+        /* ===== Hero ===== */
+        .hero {
+            background: linear-gradient(135deg, #344e3c 0%, #4a6b4a 40%, #7a8b6f 100%);
+            color: #f5f7ed;
+            padding: 80px 0 100px;
+            position: relative;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background: #f6f7f4;
+            clip-path: polygon(0 0, 100% 100%, 0 100%);
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .hero-copy h2 {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+        .hero-copy p {
+            font-size: 17px;
+            max-width: 600px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 14px;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+        .btn-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.2s;
+            cursor: default;
+        }
+        .btn-solid {
+            background: #d9c894;
+            color: #2f3e2c;
+        }
+        .btn-outline {
+            border: 1.5px solid #d9c894;
+            color: #f0ecd9;
+        }
+        .btn-solid:hover {
+            background: #c8b477;
+        }
+        .btn-outline:hover {
+            background: rgba(217, 200, 148, 0.1);
+        }
+        .hero-visual {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 24px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            text-align: center;
+        }
+        .stat-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 16px 8px;
+        }
+        .stat-num {
+            font-size: 28px;
+            font-weight: 800;
+            display: block;
+            color: #f2e3b3;
+        }
+        .stat-label {
+            font-size: 13px;
+            opacity: 0.75;
+            margin-top: 4px;
+        }
+
+        /* ===== Intro section ===== */
+        .intro-section {
+            padding: 70px 0 50px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-title h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2f4b2f;
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 12px;
+        }
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: #b6a77a;
+            border-radius: 4px;
+        }
+        .intro-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 20px;
+        }
+        .intro-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 28px 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+            border-left: 5px solid #6b8b5e;
+            transition: transform 0.2s;
+        }
+        .intro-card:hover {
+            transform: translateY(-4px);
+        }
+        .intro-card .card-icon {
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+        .intro-card h3 {
+            font-size: 19px;
+            color: #2f4b2f;
+            margin-bottom: 10px;
+        }
+        .intro-card p {
+            font-size: 15px;
+            color: #4e5d4a;
+        }
+
+        /* ===== Feature / 自然与人文 ===== */
+        .feature-section {
+            background: #eef2e9;
+            padding: 60px 0;
+        }
+        .feature-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .feature-text h2 {
+            font-size: 30px;
+            color: #2f4b2f;
+            margin-bottom: 20px;
+        }
+        .feature-text p {
+            margin-bottom: 18px;
+            font-size: 16px;
+        }
+        .feature-list {
+            margin-top: 16px;
+        }
+        .feature-list li {
+            padding: 8px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            border-bottom: 1px dashed #cfd8c8;
+        }
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        .feature-list .li-icon {
+            color: #5c7c4e;
+            font-weight: bold;
+        }
+        .feature-quote {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            font-style: italic;
+            border: 1px solid #e0e5da;
+        }
+        .feature-quote p {
+            font-size: 17px;
+            line-height: 1.8;
+        }
+        .quote-author {
+            margin-top: 16px;
+            font-weight: 600;
+            color: #6b7a5e;
+            font-style: normal;
+        }
+
+        /* ===== 四季景观 ===== */
+        .season-section {
+            padding: 70px 0;
+        }
+        .season-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 30px;
+        }
+        .season-card {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            transition: box-shadow 0.3s;
+        }
+        .season-card:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        }
+        .season-emoji {
+            font-size: 52px;
+            text-align: center;
+            padding: 24px 0 8px;
+            background: #f1f4ec;
+        }
+        .season-info {
+            padding: 16px 18px 22px;
+        }
+        .season-info h3 {
+            font-size: 18px;
+            margin-bottom: 6px;
+            color: #2f4b2f;
+        }
+        .season-info p {
+            font-size: 14px;
+            color: #5a6755;
+        }
+
+        /* ===== 旅行攻略 ===== */
+        .travel-section {
+            background: #ffffff;
+            padding: 60px 0;
+        }
+        .travel-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .travel-item {
+            border: 1px solid #e5eae0;
+            border-radius: 18px;
+            padding: 28px;
+            background: #fbfcf9;
+        }
+        .travel-item h3 {
+            color: #3b5a38;
+            margin-bottom: 16px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .travel-item h3 .step {
+            background: #6b8b5e;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+        .travel-item ul li {
+            padding: 6px 0;
+            font-size: 15px;
+            display: flex;
+            gap: 8px;
+        }
+        .travel-item ul li::before {
+            content: "·";
+            color: #6b8b5e;
+            font-weight: bold;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-section {
+            background: #edf1e8;
+            padding: 60px 0 70px;
+        }
+        .faq-list {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #ffffff;
+            border-radius: 14px;
+            margin-bottom: 14px;
+            padding: 20px 28px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+        .faq-question {
+            font-weight: 600;
+            font-size: 17px;
+            color: #2f4b2f;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        .faq-answer {
+            margin-top: 12px;
+            color: #4c5a48;
+            font-size: 15px;
+            border-top: 1px dashed #d5dfcd;
+            padding-top: 12px;
+        }
+
+        /* ===== Footer ===== */
+        .site-footer {
+            background: #263a28;
+            color: #cbd8c2;
+            padding: 40px 0 30px;
+            margin-top: 0;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-brand h3 {
+            color: #e5ecd9;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+        .footer-brand p {
+            font-size: 14px;
+            opacity: 0.8;
+            max-width: 360px;
+        }
+        .footer-links h4, .footer-contact h4 {
+            color: #d9c894;
+            margin-bottom: 14px;
+            font-size: 16px;
+        }
+        .footer-links li, .footer-contact li {
+            padding: 4px 0;
+            font-size: 14px;
+        }
+        .footer-bottom {
+            border-top: 1px solid #3d5540;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            opacity: 0.7;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+            .intro-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .season-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .feature-layout {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 640px) {
+            .container {
+                padding: 0 16px;
+            }
+            .header-inner {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+            .main-nav ul {
+                justify-content: center;
+                gap: 16px;
+            }
+            .hero {
+                padding: 50px 0 70px;
+            }
+            .hero-copy h2 {
+                font-size: 30px;
+            }
+            .intro-grid, .travel-grid {
+                grid-template-columns: 1fr;
+            }
+            .season-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .btn-group {
+                flex-direction: column;
+            }
+            .btn {
+                text-align: center;
+            }
+        }
+
+        /* ===== 隐藏占位（无实际内容） ===== */
+        .extra-space {
+            height: 0;
+        }
+    </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo-area">
+            <div class="logo-icon">🏔️</div>
+            <div class="logo-text">
+                <h1>乌东峰 · 人文地理志</h1>
+                <span>自然 · 人文 · 旅行 · 生活</span>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">山野风光</a></li>
+                <li><a href="#">人文故事</a></li>
+                <li><a href="#">旅行指引</a></li>
+                <li><a href="#">四季图鉴</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <div class="hero-badge">📍 乌东峰 · 值得深入探索的山地聚落</div>
+                <h2>在乌东峰，看见山野与人文的交融</h2>
+                <p>乌东峰并非一个广为人知的旅游标签，而是一片保留着质朴气息的土地。这里拥有起伏的山峦、层次分明的林带，以及散落在山间的村落与农田。对于喜欢安静行走、观察乡土细节的旅行者而言，乌东峰提供了一种慢下来的可能。</p>
+                <div class="btn-group">
+                    <span class="btn btn-solid">了解乌东峰风貌</span>
+                    <span class="btn btn-outline">查看四季旅行建议</span>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">800+</span>
+                        <span class="stat-label">典型海拔区间(m)</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">4</span>
+                        <span class="stat-label">明显季节变化</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">20+</span>
+                        <span class="stat-label">自然与人文看点</span>
+                    </div>
+                </div>
+                <p style="margin-top: 22px; font-size: 15px; opacity: 0.9; text-align: center;">🌿 徒步、观云、探访村落 —— 乌东峰的关键词</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 简介卡片 -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>乌东峰 · 三个侧面</h2>
+            </div>
+            <div class="intro-grid">
+                <div class="intro-card">
+                    <div class="card-icon">⛰️</div>
+                    <h3>地理与生态</h3>
+                    <p>乌东峰属于典型的山地地貌，海拔变化带来植被垂直分布。低处有农田与次生林，中高海拔区域可见针阔混交林。山间溪流和雾气是常见景观，也构成独特的局部小气候。</p>
+                </div>
+                <div class="intro-card">
+                    <div class="card-icon">🏡</div>
+                    <h3>乡土与聚落</h3>
+                    <p>山间分布着零星的村落，房屋依山而建，不少保留着夯土墙或木结构。村民以农业和林果为主，村中古树、石阶、老井等元素，记录着人与山相处的痕迹。</p>
+                </div>
+                <div class="intro-card">
+                    <div class="card-icon">🥾</div>
+                    <h3>徒步与探访</h3>
+                    <p>没有过度开发的步道，更适合喜欢野趣的徒步者。林间小径、山脊线、村道相互连接，可组合出多条半日或一日路线。探访乌东峰，需要一份耐心和方向感。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 自然与人文特色 -->
+    <section class="feature-section">
+        <div class="container feature-layout">
+            <div class="feature-text">
+                <h2>乌东峰的自然与人文线索</h2>
+                <p>乌东峰的价值不在某个独立景点，而在于沿途的景观序列。从山脚村落出发，沿着蜿蜒山路向上，农田逐渐让位于林地，视野从谷地扩展到远山。</p>
+                <p>在人文层面，乌东峰保留着传统山地生活的痕迹：石砌护坡、引水渠、晒谷场，以及村民口耳相传的地名故事。这些日常细节，恰恰构成理解乌东峰的重要线索。</p>
+                <ul class="feature-list">
+                    <li><span class="li-icon">✓</span> 山脊线视野开阔，适合观察云海与光影变化</li>
+                    <li><span class="li-icon">✓</span> 村落建筑与梯田组合，具有较高的观赏性</li>
+                    <li><span class="li-icon">✓</span> 徒步路线可结合乡村道路，形成环线</li>
+                    <li><span class="li-icon">✓</span> 四季风貌差异明显，不同季节皆有看点</li>
+                </ul>
+            </div>
+            <div class="feature-quote">
+                <p>“乌东峰的妙处，不在于征服一座山峰，而在于行走时与土地发生对话。那些错落的田埂、安静的竹林、偶尔传来的鸟鸣，都在提醒我们：山河自有节奏。”</p>
+                <div class="quote-author">—— 一位多次探访乌东峰的旅行笔记摘录</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 四季景观 -->
+    <section class="season-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>乌东峰 · 四季速写</h2>
+            </div>
+            <div class="season-grid">
+                <div class="season-card">
+                    <div class="season-emoji">🌸</div>
+                    <div class="season-info">
+                        <h3>春 · 新绿</h3>
+                        <p>山花与嫩芽交替，雾气频繁，溪水丰沛。适合观察植物萌发，村落周围常有野樱与檵木点缀。</p>
+                    </div>
+                </div>
+                <div class="season-card">
+                    <div class="season-emoji">☀️</div>
+                    <div class="season-info">
+                        <h3>夏 · 清凉</h3>
+                        <p>高海拔区域凉爽，林间徒步舒适。阵雨过后常现云海，夏夜可见星空，是避暑与露营的潜在季节。</p>
+                    </div>
+                </div>
+                <div class="season-card">
+                    <div class="season-emoji">🍂</div>
+                    <div class="season-info">
+                        <h3>秋 · 多彩</h3>
+                        <p>落叶阔叶树变色，山体呈现红黄交织。秋高气爽，能见度佳，适合远眺与摄影。</p>
+                    </div>
+                </div>
+                <div class="season-card">
+                    <div class="season-emoji">❄️</div>
+                    <div class="season-info">
+                        <h3>冬 · 静谧</h3>
+                        <p>冬季偶有降雪，山顶可能出现雾凇。大部分徒步道较为冷清，适合喜欢安静的人。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 旅行攻略 -->
+    <section class="travel-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>前往乌东峰 · 实用指引</h2>
+            </div>
+            <div class="travel-grid">
+                <div class="travel-item">
+                    <h3><span class="step">1</span> 行前准备</h3>
+                    <ul>
+                        <li>确认天气，山区气候多变，备好雨具和保暖衣物</li>
+                        <li>穿防滑徒步鞋，部分路段可能有碎石或泥泞</li>
+                        <li>自备干粮与足够饮水，山上补给点极少</li>
+                        <li>提前下载离线地图，部分区域手机信号弱</li>
+                    </ul>
+                </div>
+                <div class="travel-item">
+                    <h3><span class="step">2</span> 路线建议</h3>
+                    <ul>
+                        <li>半日路线：村口 → 梯田 → 山腰林地 → 原路返回</li>
+                        <li>一日路线：沿主路登至山脊，走环线返回</li>
+                        <li>探访村落：留出时间与村民交流，尊重当地生活</li>
+                        <li>请勿进入未开发区域，避免夜间徒步</li>
+                    </ul>
+                </div>
+                <div class="travel-item">
+                    <h3><span class="step">3</span> 环保守则</h3>
+                    <ul>
+                        <li>带走所有垃圾，不留下任何痕迹</li>
+                        <li>不采摘植物或打扰野生动物</li>
+                        <li>避免大声喧哗，维护山野宁静</li>
+                        <li>如遇防火期，切勿使用明火</li>
+                    </ul>
+                </div>
+                <div class="travel-item">
+                    <h3><span class="step">4</span> 适合人群</h3>
+                    <ul>
+                        <li>喜欢自然观察的徒步爱好者</li>
+                        <li>希望体验乡土风情的人文旅行者</li>
+                        <li>摄影爱好者（晨昏与季节变化）</li>
+                        <li>需要安静放松的城市人群</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>关于乌东峰 · 常见疑问</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">乌东峰适合完全没徒步经验的人吗？</div>
+                    <div class="faq-answer">如果只是前往山脚村落和农田区域，普通体力即可。但若想登至山脊或穿越密林，建议具备基本徒步经验，并最好结伴而行。初次到访可以先走成熟村道。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">乌东峰的最佳游览季节是什么时候？</div>
+                    <div class="faq-answer">春秋两季气候最稳定，景色层次丰富。夏季凉爽但多阵雨，冬季部分路段可能结冰。其实每个季节都有不同气质，关键是根据天气调整计划。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">乌东峰有住宿或餐饮设施吗？</div>
+                    <div class="faq-answer">山脚和周边村落可能有少量农家乐或民宿，但数量不多且分布分散。建议提前做好住宿规划，或选择一日往返。部分村落有简单的小卖部，但商品种类有限。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">在乌东峰徒步需要注意哪些安全问题？</div>
+                    <div class="faq-answer">主要注意三方面：一是天气突变，山区易起雾；二是部分路段陡滑，需穿防滑鞋；三是方向辨识，建议携带GPS设备或提前下载离线地图。切勿独自进入不熟悉区域。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>乌东峰·人文地理志</h3>
+                <p>一个以乌东峰为主题的内容平台，专注于分享山地风光、乡土人文与实地旅行经验。我们倡导负责任的探索，让每一次抵达都更有意义。</p>
+            </div>
+            <div class="footer-links">
+                <h4>内容栏目</h4>
+                <ul>
+                    <li>山野草木</li>
+                    <li>村落故事</li>
+                    <li>徒步路线</li>
+                    <li>季节影像</li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>关于我们</h4>
+                <ul>
+                    <li>内容准则</li>
+                    <li>投稿与交流</li>
+                    <li>友情链接</li>
+                    <li>隐私说明</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 乌东峰人文地理志 · 本页面仅作信息展示与分享</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+                      </html>
