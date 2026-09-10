@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿萨帝 - 高端智能厨电品牌与品质厨房生活指南</title>
+    <meta name="description" content="阿萨帝专注高端智能厨电，提供集成灶、油烟机、燃气灶等产品，以精湛工艺与创新科技打造现代品质厨房。了解品牌故事、产品系列及厨房生活灵感。">
+    <meta name="keywords" content="阿萨帝,阿萨帝厨电,阿萨帝集成灶,高端厨电,智能厨电,厨房电器品牌">
+    <style>
+        /* CSS Reset & Base */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f8f9fa;
+            color: #2c2c2c;
+            line-height: 1.6;
+        }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 12px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #c8a46e;
+        }
+        .section-subtitle {
+            color: #666;
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+        }
+        .text-center { text-align: center; }
+        .text-center .section-title::after { left: 50%; transform: translateX(-50%); }
+
+        /* Header & Navigation */
+        .top-bar {
+            background-color: #1a1a1a;
+            color: #aaa;
+            font-size: 0.85rem;
+            padding: 8px 0;
+        }
+        .top-bar .container { display: flex; justify-content: space-between; align-items: center; }
+        .top-bar a { color: #ccc; margin-left: 20px; transition: color 0.3s; }
+        .top-bar a:hover { color: #c8a46e; }
+        .header-main {
+            background-color: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .header-main .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+        .logo { display: flex; align-items: center; }
+        .logo-icon {
+            width: 48px; height: 48px;
+            background: linear-gradient(135deg, #c8a46e, #a07a3c);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            margin-right: 12px;
+            color: white;
+            font-weight: 700;
+            font-size: 1.4rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .logo-text h1 { font-size: 1.8rem; font-weight: 700; color: #1a1a1a; letter-spacing: 1px; }
+        .logo-text span { font-size: 0.75rem; color: #888; letter-spacing: 3px; display: block; line-height: 1.2; }
+        .main-nav ul { display: flex; gap: 30px; }
+        .main-nav ul li a { font-size: 1.05rem; font-weight: 500; color: #333; padding: 8px 0; border-bottom: 2px solid transparent; transition: all 0.3s; }
+        .main-nav ul li a:hover { color: #b08d57; border-bottom-color: #b08d57; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDE2MDAgNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMjIyIi8+PHBhdGggZD0iTTAgMzAwIEMyMDAgMjAwIDQwMCA0MDAgNjAwIDMwMCBDODAwIDIwMCAxMDAwIDQwMCAxMjAwIDMwMCBDMTQwMCAyMDAgMTUwMCAyNTAgMTYwMCAyMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2M4YTQ2ZSIgc3Ryb2tlLXdpZHRoPSIzIiBvcGFjaXR5PSIwLjYiLz48Y2lyY2xlIGN4PSI4MDAiIGN5PSIzMDAiIHI9IjE1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhNDZlIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuNCIvPjwvc3ZnPg==') center/cover;
+            padding: 120px 0;
+            color: white;
+            text-align: center;
+        }
+        .hero-content { max-width: 800px; margin: 0 auto; }
+        .hero h2 { font-size: 3.2rem; font-weight: 700; margin-bottom: 20px; letter-spacing: 3px; text-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .hero p { font-size: 1.3rem; opacity: 0.9; margin-bottom: 35px; line-height: 1.8; }
+        .hero-btn {
+            display: inline-block;
+            background-color: #c8a46e;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        .hero-btn:hover { background-color: transparent; border-color: #c8a46e; }
+
+        /* Feature Strip */
+        .feature-strip {
+            background-color: #ffffff;
+            border-bottom: 1px solid #eee;
+        }
+        .feature-strip .container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 40px 20px; }
+        .feature-item { text-align: center; padding: 20px 10px; }
+        .feature-icon { font-size: 2.5rem; color: #c8a46e; margin-bottom: 10px; }
+        .feature-item h3 { font-size: 1.1rem; margin-bottom: 8px; color: #333; }
+        .feature-item p { font-size: 0.9rem; color: #777; }
+
+        /* Intro / About Section */
+        .about-section { padding: 80px 0; background-color: #f8f9fa; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-text h3 { font-size: 1.8rem; margin-bottom: 20px; color: #1a1a1a; }
+        .about-text p { margin-bottom: 15px; color: #555; font-size: 1.05rem; }
+        .about-stats { display: flex; gap: 40px; margin-top: 30px; }
+        .stat-item h4 { font-size: 2rem; color: #c8a46e; }
+        .stat-item span { color: #888; font-size: 0.9rem; }
+        .about-image {
+            background: linear-gradient(145deg, #2a2a2a, #3d3d3d);
+            border-radius: 20px;
+            padding: 40px;
+            color: white;
+            min-height: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .about-image span { font-size: 5rem; margin-bottom: 20px; }
+        .about-image p { font-size: 1.2rem; font-weight: 300; }
+
+        /* Products Section */
+        .products-section { padding: 80px 0; background-color: #ffffff; }
+        .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 20px; }
+        .product-card {
+            background: #fafafa;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eee;
+        }
+        .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .product-thumb {
+            height: 220px;
+            background: linear-gradient(135deg, #e8e8e8, #d0d0d0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #888;
+            position: relative;
+        }
+        .product-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #c8a46e;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .product-info { padding: 25px; }
+        .product-info h3 { font-size: 1.4rem; margin-bottom: 10px; }
+        .product-info p { color: #666; font-size: 0.95rem; margin-bottom: 15px; }
+        .product-link { color: #b08d57; font-weight: 600; font-size: 0.95rem; }
+
+        /* Technology Section */
+        .tech-section { padding: 80px 0; background-color: #f8f9fa; }
+        .tech-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 20px; }
+        .tech-card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            border-left: 4px solid #c8a46e;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+        }
+        .tech-card h3 { font-size: 1.3rem; margin-bottom: 15px; color: #1a1a1a; }
+        .tech-card p { color: #666; line-height: 1.8; }
+
+        /* Design Philosophy */
+        .design-section { padding: 80px 0; background: linear-gradient(135deg, #1a1a1a, #2d2d2d); color: white; }
+        .design-section .section-title { color: white; }
+        .design-section .section-subtitle { color: #aaa; }
+        .design-flex { display: flex; gap: 60px; align-items: center; }
+        .design-text { flex: 1; }
+        .design-text h3 { font-size: 1.6rem; margin-bottom: 20px; color: #c8a46e; }
+        .design-text p { margin-bottom: 15px; color: #ccc; line-height: 1.8; }
+        .design-visual { flex: 1; background: rgba(255,255,255,0.05); border-radius: 20px; padding: 40px; text-align: center; border: 1px solid rgba(255,255,255,0.1); }
+
+        /* Testimonials */
+        .testimonial-section { padding: 80px 0; background-color: #fff; }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .testimonial-card { background: #fafafa; border-radius: 16px; padding: 30px; border: 1px solid #eee; }
+        .testimonial-card .quote { font-size: 3rem; color: #c8a46e; line-height: 1; margin-bottom: 10px; }
+        .testimonial-card p { font-style: italic; color: #555; margin-bottom: 20px; }
+        .testimonial-author { display: flex; align-items: center; }
+        .author-avatar { width: 45px; height: 45px; border-radius: 50%; background: #c8a46e; color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 12px; }
+        .author-name { font-weight: 600; }
+        .author-info { font-size: 0.85rem; color: #999; }
+
+        /* Service & Support */
+        .service-section { padding: 80px 0; background-color: #f8f9fa; }
+        .service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
+        .service-card { text-align: center; padding: 40px 20px; background: white; border-radius: 16px; box-shadow: 0 2px 15px rgba(0,0,0,0.03); }
+        .service-card .service-icon { font-size: 2.8rem; margin-bottom: 15px; }
+        .service-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+        .service-card p { font-size: 0.9rem; color: #777; }
+
+        /* FAQ Section */
+        .faq-section { padding: 80px 0; background-color: #fff; }
+        .faq-list { max-width: 900px; margin: 0 auto; }
+        .faq-item { margin-bottom: 15px; border: 1px solid #eee; border-radius: 12px; overflow: hidden; }
+        .faq-question { background: #fafafa; padding: 20px 25px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-question span { color: #c8a46e; font-size: 1.3rem; }
+        .faq-answer { padding: 0 25px 20px; color: #666; line-height: 1.8; display: block; }
+
+        /* CTA Section */
+        .cta-section { padding: 80px 0; background: linear-gradient(135deg, #c8a46e, #a07a3c); color: white; text-align: center; }
+        .cta-section h2 { font-size: 2.5rem; margin-bottom: 15px; }
+        .cta-section p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+        .cta-btn { background: white; color: #a07a3c; padding: 15px 40px; border-radius: 40px; font-weight: 700; font-size: 1.1rem; display: inline-block; transition: transform 0.3s; }
+        .cta-btn:hover { transform: scale(1.05); }
+
+        /* Footer */
+        .footer { background-color: #1a1a1a; color: #aaa; padding: 60px 0 0; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; }
+        .footer-brand p { line-height: 1.8; }
+        .footer h4 { color: white; margin-bottom: 20px; font-size: 1.1rem; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { color: #aaa; transition: color 0.3s; }
+        .footer-links a:hover { color: #c8a46e; }
+        .copyright { border-top: 1px solid #333; padding: 20px 0; text-align: center; font-size: 0.9rem; }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .products-grid { grid-template-columns: repeat(2, 1fr); }
+            .testimonial-grid { grid-template-columns: 1fr; }
+            .service-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .feature-strip .container { grid-template-columns: repeat(2, 1fr); }
+            .tech-grid { grid-template-columns: 1fr; }
+            .design-flex { flex-direction: column; }
+        }
+        @media (max-width: 768px) {
+            .main-nav { display: none; }
+            .header-main .container { justify-content: center; }
+            .hero h2 { font-size: 2.2rem; }
+            .products-grid { grid-template-columns: 1fr; }
+            .service-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .top-bar .container { flex-direction: column; gap: 5px; }
+            .top-bar .right-links { display: flex; flex-direction: column; text-align: center; }
+            .top-bar a { margin: 0 10px; }
+            .section-title { font-size: 1.6rem; }
+        }
+    </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div>匠心品质 · 智造未来厨房</div>
+            <div class="right-links">
+                <a href="#">品牌服务</a>
+                <a href="#">联系我们</a>
+                <a href="#">400-888-8888</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header-main">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">A</div>
+                <div class="logo-text">
+                    <h1>阿萨帝</h1>
+                    <span>ASADI · 高端厨电</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">产品中心</a></li>
+                    <li><a href="#">品牌故事</a></li>
+                    <li><a href="#">科技研发</a></li>
+                    <li><a href="#">服务支持</a></li>
+                    <li><a href="#">新闻资讯</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>阿萨帝 · 品质厨房生活的引领者</h2>
+                <p>将德系精工与东方烹饪智慧完美融合，以科技创新为现代家庭打造健康、智能、富有格调的烹饪空间。</p>
+                <a href="#" class="hero-btn">探索阿萨帝产品</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Strip -->
+    <section class="feature-strip">
+        <div class="container">
+            <div class="feature-item">
+                <div class="feature-icon">⚙️</div>
+                <h3>精工制造</h3>
+                <p>德系标准工艺，严苛品质把控</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">💡</div>
+                <h3>创新科技</h3>
+                <p>智能烹饪系统，一键美味直达</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🌿</div>
+                <h3>健康环保</h3>
+                <p>低噪净烟技术，守护家人健康</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🛠️</div>
+                <h3>五星服务</h3>
+                <p>免费上门安装，整机五年质保</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Intro -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title">阿萨帝品牌故事</h2>
+                    <p>阿萨帝（ASADI）源自对品质厨房生活的深刻洞察，品牌融合了欧洲工业设计的严谨与东方烹饪文化的温度。</p>
+                    <p>自成立以来，阿萨帝始终坚持以用户需求为核心，将科技创新与美学设计融入每一件厨电产品中。从高效净烟的集成灶到精准控火的燃气灶，阿萨帝致力于为每个家庭创造轻松、愉悦、有品质的烹饪体验。</p>
+                    <p>我们相信，厨房不仅是烹饪的场所，更是家人情感交流、生活美学呈现的重要空间。</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h4>200+</h4>
+                            <span>研发专利技术</span>
+                        </div>
+                        <div class="stat-item">
+                            <h4>50万+</h4>
+                            <span>品质家庭之选</span>
+                        </div>
+                        <div class="stat-item">
+                            <h4>30+</h4>
+                            <span>全球服务网络</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <span>🏠</span>
+                    <h3>阿萨帝智慧厨房</h3>
+                    <p>以科技致敬生活<br>让每一次烹饪都成为享受</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title text-center" style="display:block; text-align:center;">产品中心</h2>
+            <p class="section-subtitle text-center">涵盖集成灶、分体式烟灶、嵌入式电器等全场景厨房解决方案</p>
+            <div class="products-grid">
+                <article class="product-card">
+                    <div class="product-thumb">
+                        <span>🔥</span>
+                        <span class="product-tag">热销款</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>阿萨帝蒸烤一体集成灶</h3>
+                        <p>集烟机、灶具、蒸箱、烤箱于一体，节省空间，功能强大。大师级蒸烤工艺，轻松烹制百道佳肴。</p>
+                        <a href="#" class="product-link">了解详情 →</a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <div class="product-thumb">
+                        <span>💨</span>
+                        <span class="product-tag">智能</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>阿萨帝智能变频油烟机</h3>
+                        <p>搭载AI变频电机，自动感知烟道压力，智能调节风量。最大静压1000Pa，高峰期也能畅快排烟。</p>
+                        <a href="#" class="product-link">了解详情 →</a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <div class="product-thumb">
+                        <span>🍳</span>
+                        <span class="product-tag">新品</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>阿萨帝精控燃气灶</h3>
+                        <p>5.2kW大火力，热效率高达68%。七段精控调火，从文火慢炖到猛火爆炒，火候尽在掌握。</p>
+                        <a href="#" class="product-link">了解详情 →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology -->
+    <section class="tech-section">
+        <div class="container">
+            <h2 class="section-title">核心科技研发</h2>
+            <p class="section-subtitle">阿萨帝持续投入技术创新，只为打造更懂中国家庭的厨房电器</p>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h3>🔬 多维净烟系统</h3>
+                    <p>采用独特的侧吸下排与多重油烟分离技术，配合纳米不沾油风道，实现高达99.9%的油脂分离度，让厨房远离油烟困扰，保持持久洁净。</p>
+                </div>
+                <div class="tech-card">
+                    <h3>🔥 智慧燃烧技术</h3>
+                    <p>全新一代燃烧器，采用上进风全预混设计，火焰分布更均匀。搭配智能感温探头，自动检测锅具温度，防止干烧，烹饪更安全。</p>
+                </div>
+                <div class="tech-card">
+                    <h3>🎛️ AI智能交互</h3>
+                    <p>通过手机APP即可远程控制设备，内置云端食谱库，一键启动烹饪程序。语音控制功能让操作更便捷，下厨也能轻松惬意。</p>
+                </div>
+                <div class="tech-card">
+                    <h3>🧼 自清洁系统</h3>
+                    <p>集成灶内置热风循环自清洁技术，通过高温软化内部油污，无需手动拆洗，保持内部洁净如新，持久大吸力。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Philosophy -->
+    <section class="design-section">
+        <div class="container">
+            <div class="design-flex">
+                <div class="design-text">
+                    <h2 class="section-title">设计与美学</h2>
+                    <h3>简约而不简单，低调且显奢华</h3>
+                    <p>阿萨帝产品外观设计遵循少即是多的现代主义理念，摒弃冗余装饰，用流畅的线条与精致的材质体现高级质感。</p>
+                    <p>机身采用黑晶钢化玻璃面板，防爆耐高温，易于清洁。一体成型工艺，无死角设计，每一处细节都彰显匠心品质。</p>
+                    <p>无论是现代简约风还是轻奢工业风厨房，阿萨帝都能成为点缀空间的艺术品。</p>
+                </div>
+                <div class="design-visual">
+                    <div style="font-size: 5rem; margin-bottom: 20px;">✨</div>
+                    <h3 style="color: #c8a46e; font-size: 1.8rem; margin-bottom: 15px;">阿萨帝设计语言</h3>
+                    <p style="color: #ccc;">极简 · 精致 · 实用 · 耐久</p>
+                    <p style="color: #aaa; margin-top: 20px;">荣获多项国内外设计大奖<br>为中国家庭厨房空间而生</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonial-section">
+        <div class="container">
+            <h2 class="section-title text-center" style="display:block; text-align:center;">用户之声</h2>
+            <p class="section-subtitle text-center">来自阿萨帝真实用户的体验分享</p>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="quote">“</div>
+                    <p>换了阿萨帝集成灶之后，家里厨房的油烟问题彻底解决了。吸力非常大，而且噪音很小，做饭的时候感觉整个厨房都清爽了。蒸烤功能也特别实用，周末给家人做点烘焙非常方便。</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">张</div>
+                        <div>
+                            <div class="author-name">张女士</div>
+                            <div class="author-info">上海 · 三室两厅家庭</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote">“</div>
+                    <p>当初选厨电纠结了很久，最后看中了阿萨帝的颜值和品质。安装师傅很专业，服务态度也好。用了半年多，灶具火力很猛，适合中国人的爆炒习惯，而且面板特别好擦洗，真心推荐。</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">李</div>
+                        <div>
+                            <div class="author-name">李先生</div>
+                            <div class="author-info">杭州 · 新家装修</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote">“</div>
+                    <p>最满意的是阿萨帝的售后服务，安装后主动回访，还耐心教我们怎么使用。产品设计很人性化，挥手就能开关烟机，老人操作也没难度。整体来说，是一次非常满意的购物体验。</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">王</div>
+                        <div>
+                            <div class="author-name">王女士</div>
+                            <div class="author-info">成都 · 旧厨改造</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service -->
+    <section class="service-section">
+        <div class="container">
+            <h2 class="section-title">尊享服务支持</h2>
+            <p class="section-subtitle">从选购到安装，阿萨帝全程为您保驾护航</p>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">📞</div>
+                    <h3>专属顾问</h3>
+                    <p>专业客服一对一服务，提供免费厨房设计建议</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚚</div>
+                    <h3>极速配送</h3>
+                    <p>全国大部分区域次日达，免费送货入户</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>专业安装</h3>
+                    <p>持证上岗的安装团队，标准化作业流程</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>超长质保</h3>
+                    <p>整机五年质保，电机终身保修，售后无忧</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title text-center" style="display:block; text-align:center;">常见问题解答</h2>
+            <p class="section-subtitle text-center">关于阿萨帝厨电，您可能想了解</p>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">阿萨帝集成灶与传统的油烟机+燃气灶相比有什么优势？ <span>+</span></div>
+                    <div class="faq-answer">集成灶采用侧吸下排式设计，吸油烟距离更近，在油烟产生初期就能有效吸除，油烟吸净率普遍在99%以上。同时，集成灶将多种功能集于一体，节省了宝贵的厨房空间，并且设计上更美观统一。阿萨帝集成灶在静音、节能和自清洁方面也做了优化升级。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">阿萨帝油烟机的清洗方便吗？ <span>+</span></div>
+                    <div class="faq-answer">非常方便。阿萨帝油烟机配备了易拆卸的油网和不沾油涂层，日常只需用湿布擦拭表面即可。部分高端型号还带有蒸汽热洗或高温热熔自清洁功能，无需手动拆卸内部叶轮，机器即可自动完成内部清洁，保持持久大吸力。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">阿萨帝灶具使用的是什么气源？支持天然气改造吗？ <span>+</span></div>
+                    <div class="faq-answer">阿萨帝燃气灶具支持天然气（12T）和液化石油气（20Y）两种常见气源。在您下单时，客服会与您确认家中使用的气源类型，发货前我们会为您调整好对应的喷嘴。如需更改气源，也可联系售后专业人员进行改造。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">购买阿萨帝产品后，安装和售后服务如何保障？ <span>+</span></div>
+                    <div class="faq-answer">您在阿萨帝官方渠道或授权专卖店购买产品后，我们会安排专业的售后团队与您预约上门安装时间。安装完成后，整机享受五年免费质保服务。在使用过程中遇到任何问题，可随时拨打全国服务热线，我们的客服会为您提供快速响应的解决方案。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>开启您的阿萨帝品质厨房之旅</h2>
+            <p>立即预约免费上门设计，享受专属优惠方案</p>
+            <a href="#" class="cta-btn">立即咨询 · 领取好礼</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo" style="margin-bottom: 20px;">
+                        <div class="logo-icon" style="background: #c8a46e;">A</div>
+                        <div class="logo-text"><span style="color: white; font-size: 1.5rem; font-weight: 700;">阿萨帝</span></div>
+                    </div>
+                    <p>阿萨帝（ASADI）高端智能厨电品牌，致力于为全球家庭提供高品质的厨房电器产品与智慧厨房解决方案。以匠心致敬生活，用科技温暖每一个家。</p>
+                </div>
+                <div>
+                    <h4>产品中心</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">集成灶系列</a></li>
+                        <li><a href="#">油烟机系列</a></li>
+                        <li><a href="#">燃气灶系列</a></li>
+                        <li><a href="#">嵌入式蒸烤箱</a></li>
+                        <li><a href="#">消毒柜/洗碗机</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>服务支持</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">售后服务政策</a></li>
+                        <li><a href="#">安装预约</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">产品说明书下载</a></li>
+                        <li><a href="#">全国服务网点</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>关于阿萨帝</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">品牌故事</a></li>
+                        <li><a href="#">研发实力</a></li>
+                        <li><a href="#">新闻资讯</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2024 阿萨帝 ASADI 版权所有 | 本页面为品牌展示示例，非官方站点 | 技术支持：示例网络</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                  </html>
