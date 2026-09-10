@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花都租房网-花都区优质房源出租与租房攻略平台</title>
+    <meta name="description" content="花都租房网专注于广州花都区租房信息，提供花都广场、新华、狮岭、炭步等板块的整租、合租、公寓房源，同时发布真实租房攻略与防坑指南，助您快速安家花都。">
+    <meta name="keywords" content="花都租房,花都区租房,花都租房网,花都出租,花都整租,花都合租,花都公寓,花都区租房子">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* header */
+        .site-header {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+            flex-wrap: wrap;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #1e88e5, #0d47a1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 700;
+            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(30, 136, 229, 0.2);
+        }
+        .logo-text h1 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1e3a5f;
+            letter-spacing: 0.5px;
+        }
+        .logo-text p {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-top: -4px;
+        }
+        .header-nav {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+        .header-nav a {
+            font-size: 15px;
+            color: #34495e;
+            font-weight: 500;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .header-nav a:hover,
+        .header-nav a.active {
+            color: #1e88e5;
+            border-bottom-color: #1e88e5;
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .btn-post {
+            background: #1e88e5;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .btn-post:hover {
+            background: #1565c0;
+        }
+        .btn-login {
+            font-size: 14px;
+            color: #555;
+            font-weight: 500;
+            padding: 6px 10px;
+        }
+        /* hero */
+        .hero {
+            background: linear-gradient(100deg, #e8f0fe 0%, #f0f6ff 50%, #e3edfb 100%);
+            padding: 70px 0 50px;
+            border-bottom: 1px solid #e6eef9;
+        }
+        .hero-grid {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .hero-text {
+            flex: 1 1 400px;
+        }
+        .hero-text h2 {
+            font-size: 32px;
+            line-height: 1.35;
+            color: #0b2545;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .hero-text h2 span {
+            color: #1e88e5;
+            border-bottom: 3px solid #1e88e5;
+            padding-bottom: 2px;
+        }
+        .hero-text p {
+            font-size: 16px;
+            color: #3e5c76;
+            margin-bottom: 28px;
+            max-width: 500px;
+        }
+        .search-box {
+            background: #fff;
+            border-radius: 50px;
+            padding: 8px;
+            box-shadow: 0 10px 40px rgba(0, 40, 100, 0.1);
+            display: flex;
+            align-items: center;
+            max-width: 560px;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .search-box select,
+        .search-box input {
+            border: none;
+            outline: none;
+            background: transparent;
+            padding: 12px 16px;
+            font-size: 15px;
+            color: #333;
+            flex: 1;
+            min-width: 100px;
+        }
+        .search-box select {
+            max-width: 110px;
+            border-right: 1px solid #e2e8f0;
+            cursor: pointer;
+            color: #1e3a5f;
+            font-weight: 500;
+            background: transparent;
+        }
+        .search-box input {
+            flex: 2;
+        }
+        .search-box button {
+            background: #1e88e5;
+            border: none;
+            color: #fff;
+            border-radius: 30px;
+            padding: 12px 28px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+            white-space: nowrap;
+        }
+        .search-box button:hover {
+            background: #1565c0;
+        }
+        .hero-stats {
+            margin-top: 30px;
+            display: flex;
+            gap: 30px;
+        }
+        .stat-item {
+            text-align: left;
+        }
+        .stat-item strong {
+            display: block;
+            font-size: 22px;
+            color: #0b2545;
+            font-weight: 700;
+        }
+        .stat-item span {
+            font-size: 13px;
+            color: #5d7a9a;
+        }
+        .hero-image {
+            flex: 0 1 380px;
+            background: #d9e9ff;
+            border-radius: 24px;
+            padding: 30px;
+            min-height: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+            background-image: linear-gradient(135deg, #cfe0ff 0%, #e8f1ff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-image::after {
+            content: "🏠";
+            position: absolute;
+            font-size: 120px;
+            right: -10px;
+            bottom: -20px;
+            opacity: 0.15;
+            transform: rotate(-10deg);
+        }
+        .hero-image h3 {
+            font-size: 20px;
+            color: #1e3a5f;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .hero-image ul {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .hero-image li {
+            font-size: 14px;
+            color: #2c3e50;
+            background: rgba(255,255,255,0.7);
+            padding: 6px 14px;
+            border-radius: 30px;
+            max-width: 220px;
+            font-weight: 500;
+        }
+        /* section base */
+        .section {
+            padding: 50px 0;
+        }
+        .section-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .section-title h3 {
+            font-size: 24px;
+            color: #0b2545;
+            font-weight: 700;
+            position: relative;
+            padding-left: 18px;
+        }
+        .section-title h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 4px;
+            width: 5px;
+            height: 24px;
+            background: #1e88e5;
+            border-radius: 4px;
+        }
+        .section-title .more-link {
+            font-size: 14px;
+            color: #1e88e5;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        /* house grid */
+        .house-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .house-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .house-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 40, 100, 0.1);
+        }
+        .house-thumb {
+            height: 160px;
+            background: #d6e6ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: #1e88e5;
+            position: relative;
+            background-image: linear-gradient(140deg, #e1eeff, #b7d4ff);
+        }
+        .house-thumb .tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(30, 136, 229, 0.9);
+            color: #fff;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 30px;
+            font-weight: 500;
+        }
+        .house-thumb .price-badge {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: #fff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            color: #e65100;
+            font-size: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .house-info {
+            padding: 16px 18px 18px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .house-info h4 {
+            font-size: 17px;
+            font-weight: 600;
+            color: #1e3a5f;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+        .house-loc {
+            font-size: 13px;
+            color: #6b7f94;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .house-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 13px;
+            color: #5d6f83;
+            margin-top: auto;
+            border-top: 1px solid #f0f4fa;
+            padding-top: 12px;
+        }
+        /* area tags */
+        .area-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .area-tag {
+            background: #eef3fa;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #2c3e50;
+            transition: 0.2s;
+            cursor: default;
+        }
+        .area-tag:hover {
+            background: #dbe9fd;
+            color: #1e88e5;
+        }
+        .area-tag.active {
+            background: #1e88e5;
+            color: #fff;
+        }
+        /* feature split */
+        .feature-split {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: wrap;
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        }
+        .feature-content {
+            flex: 1 1 350px;
+        }
+        .feature-content h3 {
+            font-size: 22px;
+            color: #0b2545;
+            margin-bottom: 20px;
+        }
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .feature-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+        .feature-icon {
+            width: 42px;
+            height: 42px;
+            background: #e7f0fd;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        .feature-item h4 {
+            font-size: 16px;
+            color: #1e3a5f;
+            margin-bottom: 4px;
+        }
+        .feature-item p {
+            font-size: 14px;
+            color: #5d6f83;
+        }
+        .feature-side {
+            flex: 1 1 300px;
+            background: linear-gradient(150deg, #f0f7ff, #e5efff);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid #d9e8ff;
+        }
+        .feature-side h4 {
+            font-size: 18px;
+            margin-bottom: 16px;
+            color: #0b2545;
+        }
+        .feature-side p {
+            font-size: 14px;
+            color: #3e5c76;
+            margin-bottom: 15px;
+        }
+        .side-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .side-list li {
+            background: #fff;
+            padding: 10px 15px;
+            border-radius: 12px;
+            font-size: 14px;
+            color: #34495e;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        /* guide */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .guide-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            border: 1px solid #edf2f9;
+            transition: 0.2s;
+        }
+        .guide-card:hover {
+            border-color: #c1d9f5;
+        }
+        .guide-card .step-num {
+            font-size: 32px;
+            font-weight: 800;
+            color: #1e88e5;
+            opacity: 0.3;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+        .guide-card h4 {
+            font-size: 17px;
+            color: #1e3a5f;
+            margin-bottom: 8px;
+        }
+        .guide-card p {
+            font-size: 14px;
+            color: #5d6f83;
+        }
+        /* faq */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin-bottom: 14px;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.02);
+            border-left: 4px solid #1e88e5;
+        }
+        .faq-item h4 {
+            font-size: 16px;
+            color: #1e3a5f;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+        .faq-item p {
+            font-size: 14px;
+            color: #4a5b6e;
+        }
+        /* cta */
+        .cta-section {
+            background: linear-gradient(120deg, #0d2b4e, #1a4270);
+            padding: 60px 0;
+            color: #fff;
+            text-align: center;
+        }
+        .cta-section h3 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+        .cta-section p {
+            color: #b8d4f0;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-btn {
+            background: #fff;
+            color: #0d2b4e;
+            padding: 14px 38px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-block;
+            transition: 0.2s;
+        }
+        .cta-btn:hover {
+            background: #eaf2ff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        /* footer */
+        .site-footer {
+            background: #1b2a3a;
+            color: #9ab0c3;
+            padding: 40px 0 20px;
+            font-size: 14px;
+        }
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        .footer-col {
+            flex: 1 1 180px;
+        }
+        .footer-col h5 {
+            color: #e0edf9;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+        .footer-col a {
+            display: block;
+            color: #9ab0c3;
+            margin-bottom: 8px;
+            transition: 0.2s;
+        }
+        .footer-col a:hover {
+            color: #fff;
+        }
+        .footer-bottom {
+            border-top: 1px solid #2a3b4d;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #70879c;
+        }
+        /* responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                height: auto;
+                padding: 15px 0;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .header-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 14px;
+            }
+            .header-actions {
+                margin-top: 5px;
+            }
+            .hero {
+                padding: 40px 0 30px;
+            }
+            .hero-text h2 {
+                font-size: 26px;
+            }
+            .hero-image {
+                display: none;
+            }
+            .search-box select {
+                max-width: 80px;
+                padding: 10px 8px;
+            }
+            .search-box input {
+                min-width: 130px;
+            }
+            .section {
+                padding: 35px 0;
+            }
+            .section-title h3 {
+                font-size: 20px;
+            }
+            .feature-split {
+                padding: 25px;
+            }
+            .cta-section h3 {
+                font-size: 22px;
+            }
+            .house-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 14px;
+            }
+            .search-box {
+                flex-direction: column;
+                background: transparent;
+                box-shadow: none;
+                gap: 10px;
+                align-items: stretch;
+            }
+            .search-box select,
+            .search-box input {
+                background: #fff;
+                border-radius: 30px;
+                padding: 12px 18px;
+                border: 1px solid #dde6f0;
+                width: 100%;
+                max-width: 100%;
+            }
+            .search-box select {
+                border-right: 1px solid #dde6f0;
+            }
+            .search-box button {
+                width: 100%;
+            }
+            .hero-stats {
+                gap: 18px;
+                flex-wrap: wrap;
+            }
+            .house-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <div class="logo-icon">花</div>
+                <div class="logo-text">
+                    <h1>花都租房网</h1>
+                    <p>花都区租房信息服务平台</p>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <a href="#" class="active">首页</a>
+                <a href="#">整租</a>
+                <a href="#">合租</a>
+                <a href="#">公寓</a>
+                <a href="#">找室友</a>
+                <a href="#">租房攻略</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn-login">登录/注册</a>
+                <a href="#" class="btn-post">免费发布房源</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero 搜索区 -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <h2>在花都，<span>安心租房</span> 从此开始</h2>
+                    <p>覆盖花都广场、新华、狮岭、炭步等热门板块，真实房源直连房东，智能筛选让找房更高效。</p>
+                    <div class="search-box">
+                        <select>
+                            <option>花都全区</option>
+                            <option>新华街</option>
+                            <option>花城街</option>
+                            <option>狮岭镇</option>
+                            <option>炭步镇</option>
+                            <option>花东镇</option>
+                        </select>
+                        <input type="text" placeholder="输入小区、地铁站或商圈...">
+                        <button>搜索房源</button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <strong>1200+</strong>
+                            <span>在租真实房源</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>30+</strong>
+                            <span>覆盖板块商圈</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>85%</strong>
+                            <span>房东直租比例</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <h3>今日优选 · 花都好房</h3>
+                    <ul>
+                        <li>🏙 花都广场地铁口 · 精装一房</li>
+                        <li>🌳 新华街 · 电梯两房带阳台</li>
+                        <li>🚇 狮岭皮具城 · 单间月付</li>
+                        <li>🛋 炭步工业园旁 · 全新公寓</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 热门区域 -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h3>热门找房板块</h3>
+                    <a href="#" class="more-link">查看全部房源 →</a>
+                </div>
+                <div class="area-tags">
+                    <span class="area-tag active">花都广场</span>
+                    <span class="area-tag">新华街</span>
+                    <span class="area-tag">花城街</span>
+                    <span class="area-tag">狮岭镇</span>
+                    <span class="area-tag">炭步镇</span>
+                    <span class="area-tag">花东镇</span>
+                    <span class="area-tag">赤坭镇</span>
+                    <span class="area-tag">梯面镇</span>
+                    <span class="area-tag">融创文旅城</span>
+                </div>
+                <div class="house-grid">
+                    <div class="house-card">
+                        <div class="house-thumb">
+                            <span>🏢</span>
+                            <span class="tag">整租 · 精装</span>
+                            <span class="price-badge">¥2200/月</span>
+                        </div>
+                        <div class="house-info">
+                            <h4>花都广场地铁口 云港花园电梯两房</h4>
+                            <div class="house-loc">📍 新华街 · 花都广场站步行500m</div>
+                            <div class="house-meta">
+                                <span>2室1厅</span>
+                                <span>78㎡</span>
+                                <span>中层/18F</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="house-card">
+                        <div class="house-thumb">
+                            <span>🏘</span>
+                            <span class="tag">合租 · 主卧</span>
+                            <span class="price-badge">¥1200/月</span>
+                        </div>
+                        <div class="house-info">
+                            <h4>骏威广场三房 主卧带独卫 限女生</h4>
+                            <div class="house-loc">📍 花城街 · 骏威广场小区</div>
+                            <div class="house-meta">
+                                <span>3室2厅</span>
+                                <span>15㎡(主卧)</span>
+                                <span>电梯房</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="house-card">
+                        <div class="house-thumb">
+                            <span>🏨</span>
+                            <span class="tag">公寓 · 精装</span>
+                            <span class="price-badge">¥1600/月</span>
+                        </div>
+                        <div class="house-info">
+                            <h4>狮岭皮具城旁 阳光青年公寓 拎包入住</h4>
+                            <div class="house-loc">📍 狮岭镇 · 阳光路6号</div>
+                            <div class="house-meta">
+                                <span>1室1厅</span>
+                                <span>35㎡</span>
+                                <span>有电梯</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="house-card">
+                        <div class="house-thumb">
+                            <span>🏡</span>
+                            <span class="tag">整租 · 实惠</span>
+                            <span class="price-badge">¥900/月</span>
+                        </div>
+                        <div class="house-info">
+                            <h4>炭步市场附近 步梯两房 家私齐全</h4>
+                            <div class="house-loc">📍 炭步镇 · 市场南街</div>
+                            <div class="house-meta">
+                                <span>2室1厅</span>
+                                <span>66㎡</span>
+                                <span>5F/7F</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 平台特色 + 实用信息 -->
+        <section class="section" style="background:#f0f4fc; padding-top:40px;">
+            <div class="container">
+                <div class="feature-split">
+                    <div class="feature-content">
+                        <h3>为什么选择花都租房网？</h3>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-icon">✅</div>
+                                <div>
+                                    <h4>真房源审核机制</h4>
+                                    <p>人工核实产权与出租授权，杜绝虚假房源和重复信息。</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">💬</div>
+                                <div>
+                                    <h4>房东直联无中介费</h4>
+                                    <p>平台展示直租和转租信息，直接与房东沟通，节省中间成本。</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">📋</div>
+                                <div>
+                                    <h4>合同模板与法律支持</h4>
+                                    <p>免费提供花都区标准租房合同模板，遇纠纷可咨询合作律师。</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">⚡</div>
+                                <div>
+                                    <h4>快速筛选匹配</h4>
+                                    <p>按预算、通勤、户型多维度筛选，新上房源第一时间推送。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-side">
+                        <h4>💡 花都租房小贴士</h4>
+                        <p>在花都租房，建议优先考虑地铁9号线沿线（花都广场、马鞍山公园、清塘站）通勤便利。狮岭、炭步等产业区周边单间月租约600-1200元，新华街两房整租普遍在2000-3000元区间。签订合同前务必核对房产证与房东身份证。</p>
+                        <ul class="side-list">
+                            <li>🔑 押金通常为两个月租金，可协商</li>
+                            <li>🚇 9号线直达白云区，适合跨区通勤</li>
+                            <li>🏫 融创文旅城周边为新兴租房热区</li>
+                            <li>🧾 城中村房源注意水电费单价</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 租房流程指南 -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h3>花都租房五步走</h3>
+                    <a href="#" class="more-link">查看完整攻略 →</a>
+                </div>
+                <div class="guide-grid">
+                    <div class="guide-card">
+                        <div class="step-num">01</div>
+                        <h4>明确需求与预算</h4>
+                        <p>列出通勤距离、租住人数、心理价位。花都整租一房一厅普遍在1300-2200元，两房1800-3200元。</p>
+                    </div>
+                    <div class="guide-card">
+                        <div class="step-num">02</div>
+                        <h4>筛选真实房源</h4>
+                        <p>利用区域标签筛选，关注“房东直租”标识，避开二房东加价。可联系平台客服核实房源状态。</p>
+                    </div>
+                    <div class="guide-card">
+                        <div class="step-num">03</div>
+                        <h4>实地看房重点</h4>
+                        <p>白天看采光，晚上听噪音；检查水压、空调、门窗锁具；试用所有电器，记录墙面破损。</p>
+                    </div>
+                    <div class="guide-card">
+                        <div class="step-num">04</div>
+                        <h4>核实产权信息</h4>
+                        <p>要求出示房产证原件，核对产权人姓名与出租人身份证一致。若为转租，需原房东书面同意。</p>
+                    </div>
+                    <div class="guide-card">
+                        <div class="step-num">05</div>
+                        <h4>签约留证入伙</h4>
+                        <p>使用平台标准合同，写明物业费、维修责任、退租条款。交房时拍照留底，更换门锁芯。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ 常见问题 -->
+        <section class="section" style="background:#fff;">
+            <div class="container">
+                <div class="section-title" style="justify-content:center; margin-bottom:30px;">
+                    <h3 style="padding-left:0;">花都租房常见问题</h3>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h4>花都区哪个板块租房性价比高？</h4>
+                        <p>如果预算有限且工作地点在狮岭、炭步产业区，周边城中村或楼梯房月租600-1000元可选。若依赖地铁通勤，建议考虑花都广场站周边合租或小户型，虽然单价稍高但转手方便，配套成熟。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>花都租房需要中介费吗？</h4>
+                        <p>通过本平台认证的“房东直租”房源不需要中介费。如果通过传统中介行，通常收取首月租金的50%-100%作为佣金。建议优先使用直联功能。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>网上看房时如何避免被骗？</h4>
+                        <p>牢记“未看房不付任何费用”。凡是看房前要求定金、押金、租金或“锁房费”的，多为骗局。本平台支持举报虚假房源，一经核实立即下架并封禁账号。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>花都区租房一般押几付几？</h4>
+                        <p>花都普遍为“押二付一”，部分公寓或房东可协商为“押一付三”。押金务必索要收据，退租时按合同扣除水电欠费后应全额退还。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>可以在花都租到短租月租房吗？</h4>
+                        <p>可以。花都广场、融创文旅城周边有部分品牌公寓提供1-3个月短租，但单价略高于长租。使用平台搜索时勾选“短租”标签，或直接联系房东说明需求。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA 发布房源 -->
+        <section class="cta-section">
+            <div class="container">
+                <h3>你是花都房东？</h3>
+                <p>免费发布房源，一分钟上架，直连租客，省去中介环节。租客身份核验与合同支持，让出租更安心。</p>
+                <a href="#" class="cta-btn">立即免费发布房源</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h5>花都租房网</h5>
+                    <a href="#">关于我们</a>
+                    <a href="#">联系方式</a>
+                    <a href="#">加入我们</a>
+                    <a href="#">友情链接</a>
+                </div>
+                <div class="footer-col">
+                    <h5>房源分类</h5>
+                    <a href="#">花都整租</a>
+                    <a href="#">花都合租</a>
+                    <a href="#">品牌公寓</a>
+                    <a href="#">短租月租</a>
+                </div>
+                <div class="footer-col">
+                    <h5>热门板块</h5>
+                    <a href="#">花都广场租房</a>
+                    <a href="#">狮岭镇租房</a>
+                    <a href="#">新华街租房</a>
+                    <a href="#">炭步镇租房</a>
+                </div>
+                <div class="footer-col">
+                    <h5>租住帮助</h5>
+                    <a href="#">租房流程</a>
+                    <a href="#">合同模板下载</a>
+                    <a href="#">防骗指南</a>
+                    <a href="#">常见问题</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 花都租房网 huaduzufang.com · 为花都区租客与房东提供真实信息服务</p>
+                <p style="margin-top:5px;">本站房源信息均由用户发布，请核实产权信息。谨防提前收费诈骗。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+          </html>
